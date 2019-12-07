@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./script5.sh
+sudo bash ./script5.sh
 tmp=""
 while read str
 do
@@ -16,7 +16,7 @@ cnt=1
 while read str
 do
 	ppid=$(echo "$str" | grep -E -h -s -i -o "Parent_ProcessID=[0-9]+" | grep -o "[0-9]\+")
-	avgt=$(echo "$str" | grep -E -h -s -i -o "Average_sleeping_Time=[0-9]+" | grep -o "[0-9]\+")
+	avgt=$(echo "$str" | grep -E -h -s -i -o "Average_Sleeping_Time=[0-9]+" | grep -o "[0-9]\+")
 	if [ "$previousid" == "$ppid" ]
 	then
 		let sum=$((sum+avgt))

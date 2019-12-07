@@ -1,2 +1,2 @@
 #!/bin/bash 
-ps ua | awk '{print $1 " " $11}' | grep -h -s "bern\s" | sed -n "/\s\/bin\//p" | awk '{print $2}' > out
+ps ua | awk '{print $1 " " $11 " " $2}' | grep -h -s "b3rn\s" | sed -n "/\s\/bin\//p" | awk '{print $3}' > out
